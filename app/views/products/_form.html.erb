@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+    <td><%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name)) %></td>   
   </div>
 
   <div class="field">
