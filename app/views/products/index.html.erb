@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
-
+<h2>Total de productos: <%= @products.size %></h2>
 <table>
   <thead>
     <tr>
@@ -20,7 +20,7 @@
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.category.name %></td>
+        <td> <%= link_to product.category.name, category_path(product.category_id) %> </td>
         <td><%= product.iva %></td>
         <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>

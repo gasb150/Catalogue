@@ -12,7 +12,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @product.category.name %>
+  <%= link_to @product.category.name, category_path(@product.category_id) %>
 </p>
 
 <p>
