@@ -16,10 +16,11 @@
 
   <tbody>
     <% @products.each do |product| %>
+      <% id = product.category_id %>
       <tr>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
-        <td><%= product.category_id %></td>
+        <td><%= product.category.name %></td>
         <td><%= product.iva %></td>
         <td><%= product.price %></td>
         <td><%= link_to 'Show', product %></td>
