@@ -13,15 +13,22 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <%= link_to 'Products', products_path %>
-  <%= link_to 'Categories', categories_path %>
-
-  <% if current_user %>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to 'Sign in', user_session_path %>
-  <%= link_to 'Register', new_user_registration_path %>
-  <% end %>
+  <nav class = "navbar">
+  <div class= "navbar-brand">
+  
+  </div>
+  <div class="navbar-menu"> 
+   <div class="navbar-start">
+    <%= link_to 'Products', products_path, class: "navbar-item" %>
+    <%= link_to 'Categories', categories_path, class: "navbar-item" %>
+    <%= link_to "Export dowmload products ", products_path(format: "xlsx"), class:"navbar-item" %> <span class='icon'><i class="fas fa-file-excel"></i></span>
+   </div>
+   
+   <div class="navbar-end">
+    <%= current_authorize() %>
+   </div>
+  </div>
+  </nav>
     <%= yield %>
   </body>
 </html>

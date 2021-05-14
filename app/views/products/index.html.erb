@@ -1,35 +1,76 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<h1 class="title">Products</h1>
+<h2 class="subtitle">Total de productos: <%= @products.size %></h2>
+<section class="columns">
+  <aside class="menu section">
+    <p class="menu-label">
+      Categorias
+    </p>
+    <ul class="menu-list">
 
-<h1>Products</h1>
-<h2>Total de productos: <%= @products.size %></h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Category</th>
-      <th>Iva</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <% id = product.category_id %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.description %></td>
-        <td> <%= link_to product.category.name, category_path(product.category_id) %> </td>
-        <td><%= product.iva %></td>
-        <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-      </tr>
+    <% @categories.each do |category| %>
+      <li>
+        <%= link_to category.name, category %>
+      <li>
     <% end %>
-  </tbody>
-</table>
+    <ul>
+  </aside>
+  <section class="section">
+  <div>
+  <% if current_user %>
+  <%= link_to 'New Product', new_product_path %>
+  <% end %>
+    <div class="columns">
+    <% @products.each_with_index do |product, index| %>
 
-<br>
+    <% if index % 4 == 0 %>
+ </div>
+ <div class="columns">
+  
+ <% end %>
+  <% id = product.category_id %>
+  
+  <div class ="column is-one-quarter">
+  <div class="card ">
+ 
+    <div class="card-image"> 
+      <figure class="image is-4by3">
+        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+      </figure>
+    </div>
+  
+    <div class="card-content">
+      <div class="media-content">
+        <div class="title">
+          <%= product.name %>
+        </div>
+        <div class="subtitle">
+        Precio:
+          $<%= product.price %>
+        </div>
+      </div>
+      <div class ="content">
+        <%= product.description %>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Phasellus nec iaculis mauris.</p> 
 
-<%= link_to 'New Product', new_product_path %>
+      </div>
+      <div class="card-footer">
+      <%= link_to 'Show', product, class: "card-footer-item" %>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+<% end %>
+</div>
+</div>
+</section>
+
+</section>
+
+
+</div>

@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
       format.html
        format.xlsx{ set_attachment_name "Prices #{Time.now.utc.strftime('%Y%M%d%H%M%S')}.xlsx"  }
      end
-   
+     @categories = Category.all
   end
 
   def spread
