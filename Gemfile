@@ -30,7 +30,8 @@ gem "bulma-rails", "~> 0.9.1"
 gem 'caxlsx'
 gem 'caxlsx_rails'
 gem "font-awesome-rails"
-
+gem 'unsplash'
+gem 'dotenv-rails', require: 'dotenv/rails-now'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
