@@ -29,6 +29,8 @@ gem 'devise'
 gem "bulma-rails", "~> 0.9.1"
 gem 'caxlsx'
 gem 'caxlsx_rails'
+gem "font-awesome-rails"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
