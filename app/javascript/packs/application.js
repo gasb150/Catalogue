@@ -7,7 +7,9 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import modalJs from './modal'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+modalJs()
