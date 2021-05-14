@@ -4,19 +4,6 @@
 <h1 class="title"><%= @category.name %></h1>
 <h2 class="subtitle">Total de productos: <%= @category.products.size%></h2>
 <section class="columns">
-  <aside class="menu section">
-    <p class="menu-label">
-      Categorias
-    </p>
-    <ul class="menu-list">
-
-    <% @category.products.each do |product| %>
-      <li>
-        <%= link_to product.name, product %>
-      <li>
-    <% end %>
-    <ul>
-  </aside>
   <section class="section">
   <div>
   <% if current_user %>
