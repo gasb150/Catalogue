@@ -1,6 +1,9 @@
 wb = xlsx_package.workbook
-wb.add_worksheet(name: "Buttons") do |sheet|
-  @products.each do |button|
-    sheet.add_row [button.name, button.category, button.price]
+wb.add_worksheet(name: "Products") do |sheet|
+sheet.add_row ["Producto", "Precio sin iva", "Precio con iva"]
+  @products.each do |product|
+  price_no_iva = product.price * (1-(product.iva/100))
+    sheet.add_row [product.name, price_no_iva, product.price]
   end
+  sheet.add_row ["Total", @products.size ]
 end

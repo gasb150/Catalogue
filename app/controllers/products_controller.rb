@@ -4,8 +4,9 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
-    respond_to do |format|1
-       format.xlsx{ set_attachment_name "sites #{Time.now.utc.strftime('%Y%M%d%H%M%S')}.xlsx"  }
+    respond_to do |format|
+      format.html
+       format.xlsx{ set_attachment_name "Prices #{Time.now.utc.strftime('%Y%M%d%H%M%S')}.xlsx"  }
      end
    
   end
@@ -14,53 +15,8 @@ class ProductsController < ApplicationController
 
   end
 
-  # GET /products/1 or /products/1.json
   def show
   end
-
-  # def export 
-      
-
-  #     require ‘spreadsheet’                    
-     
-  #     @products = Product.all
-  #        respond_to do |format|
-
-  #    book = Spreadsheet::Workbook.new  
-     
-  #    sheet1 = book.create_worksheet      
-  #    @products.each do |product|
-  #     sheet1[product.id,1]=params[product][:name]
-  #   end
-  #    #insert data in required sheet([row][column]) its starts from [0][0]
-     
-  #      book.write "#{Rails.root}/tmp/test.xls"              # commit the write
-     
-  # end
-  # end
- 
-
-  
-  #  def export
-  #   @products = Product.all
-  #   respond_to do |format|
-  #     format.html
-  #     format.xlsx { 
-  #       response.headers['Content-Disposition'] = 'attachment; filename="export.xlsx"'
-  #     }
-  #   end
-
-  #  end
-  #  def export
-  #    @wb.add_worksheet(name: "Basic") do |sheet|
-  #      sheet.add_row get_header 
-  #      @products.each do |pt|
-  #        sheet.add_row [pt.name]
-  #      end
-  #    end
-  #    @p.serialize("#{Rails.root}/tmp/basic.xlsx")
-  #    send_file("#{Rails.root}/tmp/basic.xlsx", filename: "Basic.xlsx", type: "application/xlsx")
-  #  end
 
   # GET /products/new
   def new
@@ -122,18 +78,13 @@ class ProductsController < ApplicationController
     end
   end
 
-    # Use callbacks to share common setup or constraints between actions.
-    # def set_product
-    #   @product = Product.find(params[:id])
-    # end
-
-    # def get_header
-    #   ["Name"]
-    # end
-
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:name, :description, :category_id, :iva, :price)
+    end
+
+    def set_product
+      @product = Product.find(params[:id])
     end
 
     def set_attachment_name(name)
