@@ -17,7 +17,7 @@
   </div>
 
   <div class="actions control">
- <% l = request.path.include?("edit") ? 'Edit' : 'Create' %>
+ <% l = request.path.include?("edit") ? 'Edit category' : 'Create category' %>
     <%= form.submit l, class: "button is-link" %>
   </div>
 <% end %>

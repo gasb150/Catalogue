@@ -12,31 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, class:"label" %>
+    <%= form.text_field :name, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_field :description %>
+    <%= form.label :description, class:"label" %>
+    <%= form.text_field :description, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
-    <td><%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name)) %></td>   
+    <%= form.label :category_id, class:"label" %>
+    <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name), {}, class:"select") %>
+  </div>
+<div class="field-body">
+  <div class="field">
+    <%= form.label :iva, class:"label" %>
+    <%= form.number_field :iva, class: "input" %>
   </div>
 
   <div class="field">
-    <%= form.label :iva %>
-    <%= form.number_field :iva %>
+    <%= form.label :price, class:"label" %>
+    <%= form.number_field :price, class: "input" %>
   </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
+  <% l = request.path.include?("edit") ? 'Edit product' : 'Create product' %>
+  <%= form.submit l, class: "button is-link" %>
+</div>
 <% end %>
