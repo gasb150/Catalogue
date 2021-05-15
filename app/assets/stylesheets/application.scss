@@ -14,10 +14,9 @@
  *= require_self
  */
 
+@import "bulma";
+@import "font-awesome";
 
- @import "bulma";
- @import "font-awesome";
-
- .fa.fa-file-excel{
-   color: green
- }
+.fa.fa-file-excel {
+  color: green;
+}

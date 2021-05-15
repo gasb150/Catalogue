@@ -3,10 +3,10 @@ module ApplicationHelper
     el = "<div class='navbar-item'> "
     el += "<span class='icon'><i class='fa fa-user'></i></span>"
     if current_user
-     el +="#{current_user.username} </div>"
+      el += "#{current_user.username} </div>"
       el += link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-item'
     else
-      el += "</div>"
+      el += '</div>'
       el += link_to 'Sign in', user_session_path, class: 'navbar-item'
       el += link_to 'Register', new_user_registration_path, class: 'navbar-item'
     end
@@ -23,7 +23,7 @@ module ApplicationHelper
       when 'Category'
         edit_path = edit_category_path(element)
       end
-      el += link_to 'Edit', edit_path, class: "card-footer-item has-text-info"
+      el += link_to 'Edit', edit_path, class: 'card-footer-item has-text-info'
       el += link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' },
                                         class: 'card-footer-item has-text-danger'
     end

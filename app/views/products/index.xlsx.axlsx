@@ -16,7 +16,6 @@ borders_top = [borders_color[:top_bottom_left], borders_color[:top_bottom], bord
 borders_bottom = [borders[:top_bottom_left], borders[:top_bottom], borders[:top_bottom_right]]
 
 wb.add_worksheet(name: 'Products') do |sheet|
-
   sheet.add_row ['Productos', 'Total de Productos', @products.size], style: borders_top
   sheet.add_row ['']
   sheet.add_row ['Producto', 'Precio sin iva', 'Precio con iva'], style: borders_top
