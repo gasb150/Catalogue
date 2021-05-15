@@ -1,10 +1,10 @@
 # Catalgue
-This rails app, the user logs in to the app, the user is presented with the homepage
+This is a catalogue app, any user is presented with the homepage and could see the website, but, only loging user could change de database in to the app and dowmload (export) the full catalogue in a `.xlsx` file (spreadsheet).
 
-Each page uses the same top menu and footer, include links to pages that are implemented: Home, articles categories, write an article, and sing out. with a featured article, with the biggest number of votes, with a full-width image and title in the first row of the home page.
+Each page uses the same top menu and footer, include links to pages that are implemented: Home, products categories, create category and product, and sing out. The home page have a list of all products.
 
   
-List all categories and displayed in cards prodcuts name, price and description, with a button to show more datails view and also be able to edit, destroy prodcuts.
+The home page also, list all categories in an asyde, and display in cards prodcuts name, price and description, with a button to show more datails view and also be able to edit, destroy prodcuts.
 
    <img src="./app/assets/images/Home.jpg">
 
