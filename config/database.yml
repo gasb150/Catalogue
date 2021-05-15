@@ -53,3 +53,4 @@ production:
   database: store_production
   username: sotre
   password: <%= ENV['SOTRE_DATABASE_PASSWORD'] %>
+  host: localhost

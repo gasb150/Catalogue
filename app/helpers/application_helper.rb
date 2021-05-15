@@ -1,6 +1,6 @@
 module ApplicationHelper
   def current_authorize
-el = ''
+el = "<span class='icon'><i class='fa fa-user'></i></span>"
   if current_user
   el += link_to 'Sign out', destroy_user_session_path, method: :delete, class: "navbar-item" 
   else
@@ -26,5 +26,10 @@ el.html_safe
     el.html_safe
    
     end
+
+    def showImage(product)
+      el = "<img src='https://source.unsplash.com/800x600/?{#{product.name}}' alt=#{product.name} >"
+      el.html_safe
+   end
 
 end
