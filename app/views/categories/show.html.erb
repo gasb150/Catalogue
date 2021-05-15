@@ -6,7 +6,10 @@
     <section class="section">
       <div>
         <% if current_user %>
-          <%= link_to 'New Product', new_product_path %>
+          <div class="mb-3">
+            <%= link_to 'New Product', new_product_path, class: "has-text-success" %>
+            <span class="icon has-text-success"><i class="fa fa-plus"></i></span>
+          </div>
         <% end %>
         <div class="columns">
           <% @category.products.each_with_index do |product, index| %>

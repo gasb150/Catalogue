@@ -25,12 +25,12 @@
                 <% end %>
                 <div class="columns">
                   <% @products.each_with_index do |product, index| %>
-                    <% if index % 4 == 0 %>
+                    <% if index % 3 == 0 %>
                     </div>
                     <div class="columns">
                     <% end %>
                     <% id = product.category_id %>
-                    <div class ="column is-one-quarter">
+                    <div class ="column is-one-third">
                       <div class="card ">
                         <div class="card-image">
                           <figure class="image is-4by3">
