@@ -1,38 +1,46 @@
-<%= form_with(model: product) do |form| %>
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+<div class="container">
+  <div class ="columns has-text-centered">
+    <div class="column is-half container ">
+      <div class="card p-6">
+        <%= form_with(model: product) do |form| %>
+          <% if product.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+              <ul>
+                <% product.errors.each do |error| %>
+                  <li><%= error.full_message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+          <div class="field">
+            <%= form.label :name, class:"label" %>
+            <%= form.text_field :name, class: "input" %>
+          </div>
+          <div class="field">
+            <%= form.label :description, class:"label" %>
+            <%= form.text_area :description, class: "textarea" %>
+          </div>
+          <div class="field">
+            <%= form.label :category_id, class:"label" %>
+            <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name), {}, class:"select") %>
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <%= form.label :iva, class:"label" %>
+              <%= form.number_field :iva, class: "input" %>
+            </div>
+            <div class="field">
+              <%= form.label :price, class:"label" %>
+              <%= form.number_field :price, class: "input" %>
+            </div>
+          </div>
+          <div class="actions">
+            <% l = request.path.include?("edit") ? 'Edit product' : 'Create product' %>
+            <%= form.submit l, class: "button is-link mt-4" %>
+          </div>
         <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
-    <%= form.label :name, class:"label" %>
-    <%= form.text_field :name, class: "input" %>
-  </div>
-  <div class="field">
-    <%= form.label :description, class:"label" %>
-    <%= form.text_field :description, class: "input" %>
-  </div>
-  <div class="field">
-    <%= form.label :category_id, class:"label" %>
-    <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name), {}, class:"select") %>
-  </div>
-  <div class="field-body">
-    <div class="field">
-      <%= form.label :iva, class:"label" %>
-      <%= form.number_field :iva, class: "input" %>
-    </div>
-    <div class="field">
-      <%= form.label :price, class:"label" %>
-      <%= form.number_field :price, class: "input" %>
+      </div>
     </div>
   </div>
-  <div class="actions">
-    <% l = request.path.include?("edit") ? 'Edit product' : 'Create product' %>
-    <%= form.submit l, class: "button is-link" %>
-  </div>
-<% end %>
+</div>
