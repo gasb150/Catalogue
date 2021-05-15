@@ -1,7 +1,11 @@
 const modalJs= () => {
 
-window.onload = function () {
+  document.addEventListener("turbolinks:load", () => {
+    modalFunction();
+  });
 
+
+const modalFunction = () => {
 
   let rootEl = document.documentElement;
   let modals = getAll('.modal');
@@ -9,8 +13,8 @@ window.onload = function () {
   let modalCloses = getAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button');
 
   if (modalButtons.length > 0) {
-    modalButtons.forEach(function (el) {
-      el.addEventListener('click', function () {
+    modalButtons.forEach((el) => {
+      el.addEventListener('click', () => {
         let target = el.dataset.target;
         let id_target = document.getElementById(target);
         rootEl.classList.add('is-clipped');
@@ -20,14 +24,14 @@ window.onload = function () {
   }
 
   if (modalCloses.length > 0) {
-    modalCloses.forEach(function (el) {
-      el.addEventListener('click', function () {
+    modalCloses.forEach((el) => {
+      el.addEventListener('click', ()  =>{
         closeModals();
       });
     });
   }
 
-  document.addEventListener('keydown', function (event) {
+  document.addEventListener('keydown', (event) => {
     let e = event || window.event;
     if (e.keyCode === 27) {
       closeModals();
@@ -36,7 +40,7 @@ window.onload = function () {
 
   function closeModals() {
     rootEl.classList.remove('is-clipped');
-    modals.forEach(function (el) {
+    modals.forEach( (el) => {
       el.classList.remove('is-active');
     });
   }
@@ -47,6 +51,15 @@ window.onload = function () {
     return Array.prototype.slice.call(document.querySelectorAll(selector), 0);
   }
 
-};
 }
+
+
+}
+
+
+
+
+// button.addEventListener = ('click', () => {
+//   modalFunction();
+// });
 export default modalJs

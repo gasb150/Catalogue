@@ -19,9 +19,11 @@
   </div>
   <div class="navbar-menu"> 
    <div class="navbar-start">
-    <%= link_to 'Products', products_path, class: "navbar-item" %>
+    <%= link_to 'Products', products_path, class: "navbar-item", id: "btn" %>
     <%= link_to 'Categories', categories_path, class: "navbar-item" %>
-    
+    <% if current_user %>
+    <a class="navbar-item modal-button" data-target="dowmmodal">Export dowmload products </a>
+    <% end %>
     <div class="modal" id="dowmmodal">
       
         <div class="modal-background"></div>
