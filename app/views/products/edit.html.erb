@@ -1,4 +1,8 @@
 <h1>Editing Product</h1>
+<% if current_user.nil? %>
+    <% controller.redirect_to product_path(@product) %>
+  <% else %>
 <%= render 'form', product: @product %>
 <%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>
+<% end %>

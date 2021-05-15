@@ -1,6 +1,9 @@
 <div class="container">
   <h1>New Category</h1>
+  <% if current_user.nil? %>
+    <% controller.redirect_to root_path %>
+  <% else %>
   <%= render 'form', category: @category %>
   <%= link_to 'Back', categories_path %>
-  
+  <% end %>
 </div>
