@@ -1,6 +1,5 @@
 wb = xlsx_package.workbook
 
-
 s = wb.styles
 defaults = { style: :thick, color: '000000' }
 borders = Hash.new do |hash, key|
@@ -8,22 +7,23 @@ borders = Hash.new do |hash, key|
 end
 
 borders_color = Hash.new do |hash, key|
-  hash[key] = s.add_style bg_color: 'ADD8E6', b:true, border: defaults.merge({ edges: key.to_s.split('_').map(&:to_sym) })
+  hash[key] =
+    s.add_style bg_color: 'ADD8E6', b: true, border: defaults.merge({ edges: key.to_s.split('_').map(&:to_sym) })
 end
 
-
-
-percent = s.add_style num_fmt: 9
-style1= s.add_style bg_color: '8600FF'
 border_middle = [borders[:left], 0, borders[:right]]
 borders_top = [borders_color[:top_bottom_left], borders_color[:top_bottom], borders_color[:top_bottom_right]]
-borders_bottom = [borders_color[:top_bottom_left] , borders_color[:top_bottom],  borders_color[:top_bottom_right]]
+borders_bottom = [borders[:top_bottom_left], borders[:top_bottom], borders[:top_bottom_right]]
 
-wb.add_worksheet(name: "Products") do |sheet|
-sheet.add_row ["Producto", "Precio sin iva", "Precio con iva"], style: borders_top
+wb.add_worksheet(name: 'Products') do |sheet|
+
+  sheet.add_row ['Productos', 'Total de Productos', @products.size], style: borders_top
+  sheet.add_row ['']
+  sheet.add_row ['Producto', 'Precio sin iva', 'Precio con iva'], style: borders_top
+
   @products.each do |product|
-  price_no_iva = product.price * (1-(product.iva/100))
-  sheet.add_row [product.name, price_no_iva, product.price], style: border_middle
+    price_no_iva = product.price * (1 - (product.iva / 100))
+    sheet.add_row [product.name, price_no_iva, product.price], style: border_middle
   end
-  sheet.add_row ["Total de Productos", @products.size ], style: borders_bottom
+  sheet.rows.last.style = borders_bottom
 end

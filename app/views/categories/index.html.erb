@@ -1,50 +1,44 @@
 <p id="notice"><%= notice %></p>
 <p id="notice"><%= notice %></p>
 <div class="container">
-<h1>Categories</h1>
- 
+  <h1>Categories</h1>
   <section class="section">
-  <div>
-  <% if current_user %>
-  <%= link_to 'New Category', new_category_path %>
-  <% end %>
-  </div>
-  <div>
-    <div class="columns">
-    <% @categories.each_with_index do |category, index| %>
-    <% if index % 4 == 0 %>
- </div>
- <div class="columns">
- <% end %>
-  
-  <div class ="column is-one-quarter">
-  <div class="card ">
- 
-    <div class="card-image"> 
-      <figure class="image is-4by3">
-      <%= showImage(category) %>
-      </figure>
+    <div>
+      <% if current_user %>
+        <%= link_to 'New Category', new_category_path %>
+      <% end %>
     </div>
-  
-    <div class="card-content">
-      <div class="media-content">
-        <div class="title">
-          <%= category.name %>
-        </div>
-        <div class="subtitle">
-
-        </div>
-      </div>
-      <div class="card-footer">
-        <%= link_to 'Show', category, class: "card-footer-item has-text-success"%>
-        <%= user_alter_element(category) %>
+    <div>
+      <div class="columns">
+        <% @categories.each_with_index do |category, index| %>
+          <% if index % 4 == 0 %>
+          </div>
+          <div class="columns">
+          <% end %>
+          <div class ="column is-one-quarter">
+            <div class="card ">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <%= show_image(category) %>
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media-content">
+                  <div class="title">
+                    <%= category.name %>
+                  </div>
+                  <div class="subtitle">
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <%= link_to 'Show', category, class: "card-footer-item has-text-success"%>
+                  <%= user_alter_element(category) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-  </div>
-  </div>
-<% end %>
-</div>
-</div>
-</section>
-
+  </section>
 </div>

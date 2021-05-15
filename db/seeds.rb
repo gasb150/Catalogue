@@ -29,7 +29,8 @@ Category.create!(
 
 Product.create!(
   name: "Rice",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:0,
   price:1800,
@@ -37,7 +38,8 @@ Product.create!(
 
 Product.create!(
   name: "Bread",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:0,
   price:1000,
@@ -45,7 +47,8 @@ Product.create!(
 
 Product.create!(
   name: "Sugar",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:5,
   price:2200,
@@ -53,7 +56,8 @@ Product.create!(
 
 Product.create!(
   name: "Cofee",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:5,
   price:2200,
@@ -61,7 +65,8 @@ Product.create!(
 
 Product.create!(
   name: "Chocolate",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:5,
   price:2200,
@@ -69,7 +74,8 @@ Product.create!(
 
 Product.create!(
   name: "Fish",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:0,
   price:2200,
@@ -78,7 +84,8 @@ Product.create!(
 
 Product.create!(
   name: "Bananas",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 1,
   iva:0,
   price:1800,
@@ -86,7 +93,8 @@ Product.create!(
 
 Product.create!(
   name: "Aspirine",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 2,
   iva:0,
   price:1000,
@@ -94,7 +102,8 @@ Product.create!(
 
 Product.create!(
   name: "acetaminophen",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 2,
   iva:5,
   price:2200,
@@ -102,7 +111,8 @@ Product.create!(
 
 Product.create!(
   name: "Amoxicilin",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 2,
   iva:5,
   price:2200,
@@ -110,7 +120,8 @@ Product.create!(
 
 Product.create!(
   name: "Loratadine",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 2,
   iva:5,
   price:2200,
@@ -118,7 +129,8 @@ Product.create!(
 
 Product.create!(
   name: "Ibuprofen",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 2,
   iva:0,
   price:2200,
@@ -126,7 +138,8 @@ Product.create!(
 
 Product.create!(
   name: "Television",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -134,7 +147,8 @@ Product.create!(
 
 Product.create!(
   name: "Smartphone",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -142,7 +156,8 @@ Product.create!(
 
 Product.create!(
   name: "Printer",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -150,7 +165,8 @@ Product.create!(
 
 Product.create!(
   name: "Headset",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -158,7 +174,8 @@ Product.create!(
 
 Product.create!(
   name: "Laptop",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -166,7 +183,8 @@ Product.create!(
 
 Product.create!(
   name: "Tablet",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 3,
   iva:0,
   price:2200,
@@ -174,7 +192,8 @@ Product.create!(
 
 Product.create!(
   name: "Rubber Gloves",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 4,
   iva:0,
   price:1800,
@@ -182,7 +201,8 @@ Product.create!(
 
 Product.create!(
   name: "Mops",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 4,
   iva:0,
   price:1000,
@@ -190,7 +210,8 @@ Product.create!(
 
 Product.create!(
   name: "Soap",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 4,
   iva:5,
   price:2200,
@@ -198,7 +219,8 @@ Product.create!(
 
 Product.create!(
   name: "Paper towels",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 4,
   iva:5,
   price:2200,
@@ -206,7 +228,8 @@ Product.create!(
 
 Product.create!(
   name: "Detergent",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 4,
   iva:5,
   price:2200,
@@ -214,7 +237,8 @@ Product.create!(
 
 Product.create!(
   name: "Duc Tape",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:0,
   price:2200,
@@ -224,7 +248,8 @@ Product.create!(
 
 Product.create!(
   name: "Pencil",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:0,
   price:1800,
@@ -232,7 +257,8 @@ Product.create!(
 
 Product.create!(
   name: "Stapler",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:0,
   price:1000,
@@ -240,7 +266,8 @@ Product.create!(
 
 Product.create!(
   name: "Agenda",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:5,
   price:2200,
@@ -248,7 +275,8 @@ Product.create!(
 
 Product.create!(
   name: "Post-It",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:5,
   price:2200,
@@ -256,7 +284,8 @@ Product.create!(
 
 Product.create!(
   name: "Cutter",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:5,
   price:2200,
@@ -264,7 +293,8 @@ Product.create!(
 
 Product.create!(
   name: "Dossier",
-  description: "",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Phasellus nec iaculis mauris.",
   category_id: 5,
   iva:0,
   price:2200,
