@@ -1,4 +1,4 @@
-# Store
+# Catalgue
 This rails app, the user logs in to the app, the user is presented with the homepage
 
 Each page uses the same top menu and footer, include links to pages that are implemented: Home, articles categories, write an article, and sing out. with a featured article, with the biggest number of votes, with a full-width image and title in the first row of the home page.
@@ -28,11 +28,10 @@ And also this webpage it's responsive.
 
 ## Live Demo
 
-[GameStyle](https://shrouded-escarpment-15877.herokuapp.com/)
+[Catalogue](https://guarded-eyrie-47853.herokuapp.com/)
 
 ## :wrench: Getting Started
 > Take a copy of this project locally
-[Video_step](https://www.loom.com/share/3d78234501a34256a7379126c85be265)
 - Go to the main page of the repo.
 - Press the "Code" button and get the repo link.
 - Clone it using git clone. 
