@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <section class="section">
+    <section class="hero is-info is-small">
+      <div class="hero-body">
+        <p>
+          <strong><%= @product.name %></strong>
+        </p>
+        <div class ="subtitle">
+          <p>
+            <strong>Category:</strong>
+            <%= link_to @product.category.name, category_path(@product.category_id) %>
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="section">
+      <div class="tile is-ancestor">
+        <div class="tile is-4 is-vertical is-parent">
+          <div class ="tile is-child box">
+            <strong>Description:</strong>
+            <%= @product.description %>
+          </div>
+        </div>
+        <div class="tile is-4 is vertical is-parent">
+          <div class="tile is-child box">
+            <p>
+              <strong>Iva:</strong>
+              <%= @product.iva %>%
+            </p>
+          </div>
+          <div class="tile is-child box">
+            <p>
+              <strong>Price:</strong>
+              $<%= @product.price %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-footer">
+          <%= user_alter_element(@product) %>
+          <%= link_to 'Product Lists', products_path, class: "card-footer-item has-text-info" %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

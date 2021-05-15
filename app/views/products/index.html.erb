@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<div> 
+<h1 class="subtitle has-text-centered">Welcome <%= username %></h1>
+</div>
+  <h1 class="title">Products</h1>
+  <h2 class="subtitle">Total de productos: <%= @products.size %></h2>
+  <section class="columns">
+    <aside class="menu section">
+      <p class="menu-label">
+        Categorias
+      </p>
+      <ul class="menu-list">
+        <% @categories.each do |category| %>
+          <li>
+            <%= link_to category.name, category %>
+            <li>
+            <% end %>
+            <ul>
+            </aside>
+            <section class="section">
+              <div>
+                <% if current_user %>
+                  <div class="mb-3">
+                    <%= link_to 'New Product', new_product_path, class: "has-text-success" %>
+                    <span class="icon has-text-success"><i class="fa fa-plus"></i></span>
+                  </div>
+                <% end %>
+                <div class="columns">
+                  <% @products.each_with_index do |product, index| %>
+                    <% if index % 3 == 0 %>
+                    </div>
+                    <div class="columns">
+                    <% end %>
+                    <% id = product.category_id %>
+                    <div class ="column is-one-third">
+                      <div class="card ">
+                        <div class="card-image">
+                          <figure class="image is-4by3">
+                            <%= show_image(product) %>
+                          </figure>
+                        </div>
+                        <div class="card-content">
+                          <div class="media-content">
+                            <div class="title">
+                              <%= product.name %>
+                            </div>
+                            <div class="subtitle">
+                              Precio:
+                              $<%= product.price %>
+                            </div>
+                          </div>
+                          <div class ="content">
+                            <%= product.description %>
+                          </div>
+                          <div class="card-footer">
+                            <%= link_to 'Show', product, class: "card-footer-item is-link button" %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </section>
+          </section>
+        </div>

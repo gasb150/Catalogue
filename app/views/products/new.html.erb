@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New Product</h1>
+  <% if current_user.nil? %>
+    <% controller.redirect_to root_path %>
+  <% else %>
+    <%= render 'form', product: @product %>
+    <%= link_to 'Back', products_path %>
+  <% end %>
+</div>
