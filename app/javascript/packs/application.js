@@ -8,8 +8,10 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import modalJs from './modal'
+import BurguerJs from './burguer'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 modalJs()
+BurguerJs()
