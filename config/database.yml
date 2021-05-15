@@ -51,6 +51,6 @@ test:
 production:
   <<: *default
   database: store_production
-  username: sotre
+  username: store
   password: <%= ENV['SOTRE_DATABASE_PASSWORD'] %>
-  host: localhost
+
