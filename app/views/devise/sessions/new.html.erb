@@ -4,6 +4,7 @@
     <div class="column is-half container ">
       <div class="card p-6">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource, class: "has-text-danger" %>
           <div class="field">
             <%= f.label :email, class:"label" %><br />
             <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input"  %>
@@ -19,6 +20,7 @@
             </div>
           <% end %>
           <div class="actions">
+          <p class="alert has-text-danger"><%= alert %></p>
             <%= f.submit "Log in", class: "button is-link" %>
           </div>
         <% end %>

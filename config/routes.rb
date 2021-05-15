@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :categories
   resources :products
+  get 'users', to: 'categories#index'
+
   devise_for :users
   #, :controllers => {registrations: 'registrations'}
   # get 'users', to: 'categories#index'

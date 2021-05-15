@@ -299,3 +299,15 @@ Product.create!(
   iva:0,
   price:2200,
 )
+
+User.create!(
+  username: 'user2',
+  email: "email2_test@tes.com",
+  password: "passwordtest",
+)
+
+User.create!(
+  username: 'user1',
+  email: "email1_test@tes.com",
+  password: "passwordtest",
+)

@@ -4,7 +4,7 @@
       <div class="card p-6">
         <%= form_with(model: product) do |form| %>
           <% if product.errors.any? %>
-            <div id="error_explanation">
+            <div class="has-text-danger">
               <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
               <ul>
                 <% product.errors.each do |error| %>

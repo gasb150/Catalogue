@@ -5,4 +5,5 @@ class Product < ApplicationRecord
   validates :description, presence:true
   validates :category_id, presence:true
   validates :price, presence:true
+  validates :iva, presence:true
 end

@@ -1,9 +1,12 @@
 module ApplicationHelper
   def current_authorize
-    el = "<span class='icon'><i class='fa fa-user'></i></span>"
+    el = "<div class='navbar-item'> "
+    el += "<span class='icon'><i class='fa fa-user'></i></span>"
     if current_user
+     el +="#{current_user.username} </div>"
       el += link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'navbar-item'
     else
+      el += "</div>"
       el += link_to 'Sign in', user_session_path, class: 'navbar-item'
       el += link_to 'Register', new_user_registration_path, class: 'navbar-item'
     end
