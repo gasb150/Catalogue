@@ -26,6 +26,12 @@ And also this webpage it's responsive.
 - Ruby v2.7.2
 - Ruby on Rails v6.1.3
 
+## :computer: Tested With
+- Rspect
+
+## :computer: Deployed With
+- Heroku
+
 ## Live Demo
 
 [Catalogue](https://guarded-eyrie-47853.herokuapp.com/)
@@ -45,9 +51,9 @@ Open the terminal in the current project folder and then
 1. Instal gems with:
 
 ```
-1 | bundle _2.1.4_ install
+1 | bundle install
 ```
-** bundle with 2.1.4 avoid problems with Heroku **
+** for some cases you must bundle it with 2.1.4 using ```1 | bundle _2.1.4_ install``` to avoid problems with Heroku **
 
 2. Setup database with:
 
@@ -154,11 +160,6 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Microverse
-- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)</li>
 
 
 ## 📝 License
