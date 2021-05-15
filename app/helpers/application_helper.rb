@@ -20,8 +20,8 @@ el.html_safe
       elsif el_class == 'Category'
         edit_path = edit_category_path(element)
       end
-      el += link_to 'Edit', edit_category_path(element), class: "card-footer-item"
-      el += link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item"
+      el += link_to 'Edit', edit_category_path(element), class: "card-footer-item has-text-info	"
+      el += link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-footer-item has-text-danger"
     end
     el.html_safe
    
