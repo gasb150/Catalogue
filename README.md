@@ -25,6 +25,8 @@ And also this webpage it's responsive.
 
 - Ruby v2.7.2
 - Ruby on Rails v6.1.3
+- caxlsx (axlsx) gem
+- caxlsx_rails gem
 
 ## :computer: Tested With
 - Rspect
