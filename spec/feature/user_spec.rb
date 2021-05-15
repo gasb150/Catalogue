@@ -27,7 +27,7 @@ RSpec.describe 'create new user', type: :feature do
     expect(page).to have_content(@user.username)
   end
   scenario 'Create log in user with unvalid user and valid inputs' do
-    @user = User.create( username: 'gustav', email: 'gustavo@email.com', password: '123456')
+    @user = User.create(username: 'gustav', email: 'gustavo@email.com', password: '123456')
     visit new_user_session_path
     fill_in 'Email', with: 'gustavo@email.com'
     fill_in 'Password', with: '1456'
@@ -35,7 +35,7 @@ RSpec.describe 'create new user', type: :feature do
     expect(page).to have_content('Invalid Email or password')
   end
   scenario 'Sing out user with valid user and valid inputs' do
-    @user = User.create( username: 'gustav', email: 'gustavo@email.com', password: '123456')
+    @user = User.create(username: 'gustav', email: 'gustavo@email.com', password: '123456')
     visit new_user_session_path
     fill_in 'Email', with: 'gustavo@email.com'
     fill_in 'Password', with: '123456'

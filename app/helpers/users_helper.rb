@@ -1,10 +1,10 @@
 module UsersHelper
-def username
-  if current_user.nil?
+  def username
+    if current_user.nil?
       el = ''
-    else 
+    else
       el = current_user.username
     end
-  el.html_safe
+    el.html_safe
   end
 end

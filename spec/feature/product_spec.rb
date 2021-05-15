@@ -40,23 +40,23 @@ RSpec.describe 'create new article with info', type: :feature do
     expect(page).to have_content("Name can't be blank")
   end
   scenario 'Create article without price information' do
-      visit new_product_path
-      fill_in 'Name', with: 'test-title'
-      fill_in 'Description', with: 'test-text'
-      fill_in 'Price', with: ''
-      fill_in 'Iva', with: '10'
-      click_on 'Create product'
-      expect(page).to have_content("Price can't be blank")
-    end
-    scenario 'Create product without iva information' do
-      visit new_product_path
-      fill_in 'Name', with: 'test-title'
-      fill_in 'Description', with: 'test-text'
-      fill_in 'Price', with: '1231312'
-      fill_in 'Iva', with: '10'
-      click_on 'Create product'
-      expect(page).to have_content('Product was successfully created.')
-    end
+    visit new_product_path
+    fill_in 'Name', with: 'test-title'
+    fill_in 'Description', with: 'test-text'
+    fill_in 'Price', with: ''
+    fill_in 'Iva', with: '10'
+    click_on 'Create product'
+    expect(page).to have_content("Price can't be blank")
+  end
+  scenario 'Create product without iva information' do
+    visit new_product_path
+    fill_in 'Name', with: 'test-title'
+    fill_in 'Description', with: 'test-text'
+    fill_in 'Price', with: '1231312'
+    fill_in 'Iva', with: '10'
+    click_on 'Create product'
+    expect(page).to have_content('Product was successfully created.')
+  end
 end
 RSpec.describe 'create new article without user', type: :feature do
   scenario 'Create article with unvalid user' do
